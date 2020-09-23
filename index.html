@@ -34,8 +34,8 @@
                 </div>
                 <p>程序: 曹云皓 Github@ToiletCommander</p>
                 <script type="text/babel">
-                    var questionLists = generateRandomList([Areas,Colleges,Berkeley_Relates,Movies,Musics],35);
-                    var domElement = <TriviaController totalDuration={900} numToWin={20} questions={questionLists} />
+                    let questionLists = generateRandomList([Areas,Colleges,Berkeley_Relates,Movies,Musics],35);
+                    let domElement = <TriviaController totalDuration={900} numToWin={20} questions={questionLists} />
                     ReactDOM.render(domElement,document.getElementById("triviaBox"));
                 </script>
             </div>

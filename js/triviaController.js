@@ -46,13 +46,13 @@ class TriviaController extends React.Component {
         if(this.state.overallState === 2){
             return <p className="lead">挑战失败!下次再来吧!</p>
         }
-        var currentMillis = this.state.timeMillis;
-        var currentDuration = currentMillis - this.questionsStartTime;
-        var remainingTime = this.props.totalDuration - currentDuration;
-        var questionCurrentDuration = currentMillis - this.state.questionStartTime;
-        var questionRemaining = this.state.question.getTimeLimit() == 0 ? null : this.state.question.getTimeLimit() - questionCurrentDuration;
+        let currentMillis = this.state.timeMillis;
+        let currentDuration = currentMillis - this.questionsStartTime;
+        let remainingTime = this.props.totalDuration - currentDuration;
+        let questionCurrentDuration = currentMillis - this.state.questionStartTime;
+        let questionRemaining = this.state.question.getTimeLimit() == 0 ? null : this.state.question.getTimeLimit() - questionCurrentDuration;
         
-        var renderedPage = [];
+        let renderedPage = [];
         renderedPage.push(<p key="totalTimeRemaining">总时间剩余: {Math.round(remainingTime)}秒, 已答对{this.successNum}/{this.props.numToWin}题, 当前第{(this.state.currentNum + 1)}/{this.props.questions.length}题</p>);
         if(questionRemaining !== null){
             renderedPage.push(<p key="currentQuestionRemaining">当前题目剩余时间: {Math.round(questionRemaining)}秒</p>);
@@ -72,10 +72,10 @@ class TriviaController extends React.Component {
     }
 
     tick() {
-        var dateObj = new Date();
-        var currentMillis = dateObj.getTime() / 1000.0;
-        var currentDuration = currentMillis - this.questionsStartTime;
-        var remainingTime = this.props.totalDuration - currentDuration;
+        let dateObj = new Date();
+        let currentMillis = dateObj.getTime() / 1000.0;
+        let currentDuration = currentMillis - this.questionsStartTime;
+        let remainingTime = this.props.totalDuration - currentDuration;
         if(remainingTime <= 0 && this.state.currentNum >= 0 && this.state.overallState === 0){
             this.setState(
                 {
@@ -86,8 +86,8 @@ class TriviaController extends React.Component {
         }
         if(this.state.question !== null && this.state.question !== undefined){
             this.state.question.tick(currentMillis);
-            var questionCurrentDuration = currentMillis - this.state.questionStartTime;
-            var questionRemaining = this.state.question.getTimeLimit() == 0 ? null : this.state.question.getTimeLimit() - questionCurrentDuration;
+            let questionCurrentDuration = currentMillis - this.state.questionStartTime;
+            let questionRemaining = this.state.question.getTimeLimit() == 0 ? null : this.state.question.getTimeLimit() - questionCurrentDuration;
             if(questionRemaining !== null && questionRemaining <= 0){
                 this.goToNext(false);
             }
@@ -107,10 +107,10 @@ class TriviaController extends React.Component {
     }
 
     goToNext(successful) {
-        var newNum = this.state.currentNum+1;
-        var newQuestion = null;
-        var dateObj = new Date();
-        var currentMillis = dateObj.getTime() / 1000.0;
+        let newNum = this.state.currentNum+1;
+        let newQuestion = null;
+        let dateObj = new Date();
+        let currentMillis = dateObj.getTime() / 1000.0;
         if(this.newNum > this.props.questions.length - 1 || this.props.questions === null || this.props.questions === undefined){
             newQuestion = null;
             newNum = -1;

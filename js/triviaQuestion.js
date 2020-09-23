@@ -18,7 +18,7 @@ class TriviaQuestion {
             console.log("当前题目答案 = " + this.getAnswerStr());
             this.answerLogged = true;
         }
-        var returnVal = [];
+        let returnVal = [];
         returnVal.push(<p className="lead" key="questionTitle">此题是一个<b>{this.topic}</b>题目</p>)
         returnVal.push(this.getQuestion());
         if(this.showAnswer){
