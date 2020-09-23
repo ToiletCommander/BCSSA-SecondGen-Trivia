@@ -18,14 +18,14 @@ const Areas = [
     new QuestionAns("城市","金银铜铁铝","无锡",40)
 ];
 const Colleges = [
-    new FlipBoardTrivia("大学","哈佛","哈尔滨佛学院",120,3),
+    new FlipBoardTrivia("大学","哈佛","哈尔滨佛学院",120,2),
     new FlipBoardTrivia("大学","埃默里","可口可乐大学",120,2),
-    new FlipBoardTrivia("大学","伯克利","熊孩子",120,3),
-    new FlipBoardTrivia("大学","UCLA","比弗利山庄",120,3),
+    new FlipBoardTrivia("大学","伯克利","熊孩子",120,1),
+    new FlipBoardTrivia("大学","UCLA","比弗利山庄",120,2),
     new FlipBoardTrivia("大学","NYU","自由女神像",120,2),
     new FlipBoardTrivia("大学","UIUC","香槟分校",120,2),
-    new FlipBoardTrivia("大学","北大","清华",120,1),
-    new FlipBoardTrivia("大学","哈工大","规格严格 功夫到家",120,2),
+    new FlipBoardTrivia("大学","北京大学","清华",120,1),
+    new FlipBoardTrivia("大学","哈尔滨工业大学","规格严格 功夫到家",120,3),
     new FlipBoardTrivia("大学","西雅图大学","当北京遇到西雅图",120,3),
     new FlipBoardTrivia("大学","复旦大学","老番茄",120,1),
     new FlipBoardTrivia("大学","交通大学","蛤大",120,1),
