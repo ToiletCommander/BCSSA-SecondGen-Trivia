@@ -2,10 +2,20 @@ const Areas = [
     new FlipBoardTrivia("城市","长沙","茶颜悦色", 120, 2),
     new FlipBoardTrivia("城市","上海","东方明珠",120,2),
     new FlipBoardTrivia("城市","北京", "天安门", 120, 2),
-    new FlipBoardTrivia("城市","成都","火锅",120,2),
-    new FlipBoardTrivia("城市","武汉","周黑鸭",120,2),
+    new FlipBoardTrivia("城市","成都","火锅",120,1),
+    new FlipBoardTrivia("城市","武汉","周黑鸭",120,1),
     new FlipBoardTrivia("城市","深圳","南山必胜客",120,2),
-    new FlipBoardTrivia("城市","广州","小蛮腰",120,2)
+    new FlipBoardTrivia("城市","广州","小蛮腰",120,2),
+    new QuestionAns("城市","一望无际的大地","广州",40),
+    new QuestionAns("城市","萤火虫, 亮晶晶", "昆明", 40),
+    new QuestionAns("城市","双喜临门","重庆",40),
+    new QuestionAns("城市","大力士","武汉",40),
+    new QuestionAns("城市","春水碧如蓝","青海",40),
+    new QuestionAns("城市","千里戈壁","长沙",40),
+    new QuestionAns("城市","两个胖子摔跤","合肥",40),
+    new QuestionAns("城市","东方有战事","西安",40),
+    new QuestionAns("城市","船出长江口","上海",40),
+    new QuestionAns("城市","金银铜铁铝","无锡",40)
 ];
 const Colleges = [
     new FlipBoardTrivia("大学","哈佛","哈尔滨佛学院",120,3),
@@ -27,7 +37,10 @@ const Berkeley_Relates = [
     new FlipBoardTrivia("伯克利相关","Dead Week","裸奔",120,2),
     new FlipBoardTrivia("伯克利相关","Big Game Dress Code","Blue and Gold",120,1),
     new FlipBoardTrivia("伯克利相关","伯克利校歌","Hail to California",120,2),
-    new FlipBoardTrivia("伯克利相关","诺贝尔奖","停车位",120,2)
+    new FlipBoardTrivia("伯克利相关","诺贝尔奖","停车位",120,2),
+    new MCQuestion("伯克利相关","Campanile(Sather) Tower是全世界第几高的钟楼?",["第一高", "第三高", "第五高", "第七高"],"第三高",40),
+    new MCQuestion("伯克利相关","Bancroft Library收藏了多少本书?",["10万","1千万","1百万","2千万"],"1千万",40),
+    new MCQuestion("伯克利相关","伯克利提供多少种第二语言的学习?",["11","213",">=50","大约100"],">=50",40)
 ];
 
 const Movies = [
@@ -51,7 +64,7 @@ const Musics = [
     new FlipBoardTrivia("音乐","江南","圈圈圆圆圈圈",60,2),
     new FlipBoardTrivia("音乐","明天你要嫁给我","手牵手 跟我一起走",60,1),
     new FlipBoardTrivia("音乐","如果这就是爱情","张靓颖",60,1),
-    new FlipBoardTrivia("音乐","因为爱情","所以一切都是幸福的模样",60,1),
+    new FlipBoardTrivia("音乐","因为爱情","所以一切都是幸福的模样",60,1)
 ]
 
 function generateRandomList(allLists, needNum){

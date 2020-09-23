@@ -18,6 +18,8 @@
         <script type="text/babel" src="js/triviaQuestion.js"></script>
         <script type="text/babel" src="js/triviaController.js"></script>
         <script type="text/babel" src="js/flipBoardQuestion.js"></script>
+        <script type="text/babel" src="js/MCQuestion.js"></script>
+        <script type="text/babel" src="js/QuestionAnswer.js"></script>
         <script type="text/babel" src="Questions.js"></script>
     </head>
     <body>
@@ -32,8 +34,8 @@
                 </div>
                 <p>程序: 曹云皓 Github@ToiletCommander</p>
                 <script type="text/babel">
-                    var questionLists = generateRandomList([Areas,Colleges,Berkeley_Relates,Movies,Musics],30);
-                    var domElement = <TriviaController totalDuration={900} numToWin={16} questions={questionLists} />
+                    var questionLists = generateRandomList([Areas,Colleges,Berkeley_Relates,Movies,Musics],35);
+                    var domElement = <TriviaController totalDuration={900} numToWin={20} questions={questionLists} />
                     ReactDOM.render(domElement,document.getElementById("triviaBox"));
                 </script>
             </div>
