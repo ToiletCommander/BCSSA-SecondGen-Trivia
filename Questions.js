@@ -23,7 +23,7 @@ const Colleges = [
     new FlipBoardTrivia("大学","伯克利","熊孩子",120,1),
     new FlipBoardTrivia("大学","UCLA","比弗利山庄",120,2),
     new FlipBoardTrivia("大学","NYU","自由女神像",120,2),
-    new FlipBoardTrivia("大学","UIUC","香槟分校",120,2),
+    new FlipBoardTrivia("大学","UIUC","香槟分校",120,1),
     new FlipBoardTrivia("大学","北京大学","清华",120,1),
     new FlipBoardTrivia("大学","哈尔滨工业大学","规格严格 功夫到家",120,3),
     new FlipBoardTrivia("大学","西雅图大学","当北京遇到西雅图",120,3),
@@ -37,7 +37,7 @@ const Berkeley_Relates = [
     new FlipBoardTrivia("伯克利相关","Dead Week","裸奔",120,2),
     new FlipBoardTrivia("伯克利相关","Big Game Dress Code","Blue and Gold",120,1),
     new FlipBoardTrivia("伯克利相关","伯克利校歌","Hail to California",120,2),
-    new FlipBoardTrivia("伯克利相关","诺贝尔奖","停车位",120,2),
+    new FlipBoardTrivia("伯克利相关","停车位","诺贝尔奖专属",120,3),
     new MCQuestion("伯克利相关","Campanile(Sather) Tower是全世界第几高的钟楼?",["第一高", "第三高", "第五高", "第七高"],"第三高",40),
     new MCQuestion("伯克利相关","Bancroft Library收藏了多少本书?",["10万","1千万","1百万","2千万"],"1千万",40),
     new MCQuestion("伯克利相关","伯克利提供多少种第二语言的学习?",["11","213",">=50","大约100"],">=50",40)
@@ -68,8 +68,8 @@ const Musics = [
 ]
 
 function generateRandomList(allLists, needNum){
-    var allLengths = 0;
-    for(var i=0; i<allLists.length;i++){
+    let allLengths = 0;
+    for(let i=0; i<allLists.length;i++){
         allLengths+=allLists[i].length;
     }
     console.log("data length: " + allLengths);

@@ -35,7 +35,7 @@ class TriviaController extends React.Component {
                 //normal status
                 return (
                 <div>
-                    <p className="text-center">游戏还未开始⊙o⊙</p>
+                    <p className="text-center lead">游戏还未开始⊙o⊙</p>
                     <p><button className="btn btn-primary" onClick={this.handleStartGame}>开始游戏</button></p>
                 </div>);
             }
