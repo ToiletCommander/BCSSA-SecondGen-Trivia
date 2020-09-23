@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <title>BCSSA 2020 Second Gen Trivia</title>
+        <script src="js/jquery.min.js"></script>
+        <script src="js/BOOST.main.js"></script>
+        <link type="text/css" href="css/BOOST.main.css" rel="stylesheet" />
+        <link type="text/css" href="css/BOOST.animate.css" rel="stylesheet" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        
+        <script crossorigin src="js/react.production.min.js"></script>
+        <script crossorigin src="js/react-dom.production.min.js"></script>
+        <!-- 生产环境中不建议使用 -->
+        <script crossorigin src="js/babel.min.js"></script>
+
+        <script type="text/babel" src="js/triviaQuestion.js"></script>
+        <script type="text/babel" src="js/triviaController.js"></script>
+        <script type="text/babel" src="js/flipBoardQuestion.js"></script>
+        <script type="text/babel" src="Questions.js"></script>
+    </head>
+    <body>
+        <div class="cover bg-orange">
+        	<div class="coverbackgrounddiv">
+            	<!-- img src="" height="100%" width="100%" / -->
+            </div>
+            <div class="inner">
+                <h2 class="text-white">BCSSA Second-Gen Trivia</h2>
+                <div class="container" id="triviaBox">
+                    
+                </div>
+                <p>程序: 曹云皓 Github@ToiletCommander</p>
+                <script type="text/babel">
+                    var questionLists = generateRandomList([Areas,Colleges,Berkeley_Relates,Movies,Musics],30);
+                    var domElement = <TriviaController totalDuration={900} numToWin={16} questions={questionLists} />
+                    ReactDOM.render(domElement,document.getElementById("triviaBox"));
+                </script>
+            </div>
+            
+        </div>
+    </body>
+</html>
