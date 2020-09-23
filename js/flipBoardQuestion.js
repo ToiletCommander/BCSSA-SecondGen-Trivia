@@ -1,12 +1,13 @@
 class FlipBoardTrivia extends TriviaQuestion{
-    constructor(topic, title, keyword, durationLimit, timePerWordDisplay){
+    constructor(topic, title, keyword, durationLimit, startWithPromptNum){
         super(topic);
         this.question = {
             title: title,
             keyword: keyword,
             durationLimit: durationLimit,
-            timePerWordDisplay: timePerWordDisplay
+            timePerWordDisplay: 20
         };
+        
         this.showedAnswers = [];
         for(let i=0;i<title.length;i++){
             if(title[i] === ' '){
@@ -19,13 +20,19 @@ class FlipBoardTrivia extends TriviaQuestion{
                 this.showedAnswers.push(indexToStore);
             }
         }
+        for(let i=0; i<startWithPromptNum;i++){
+            this.flipNext();
+        }
+        let totalLength = this.question.title.length + this.question.keyword.length;
+        let availableLength = totalLength - this.showedAnswers.length;
+        this.question.timePerWordDisplay = this.question.durationLimit / availableLength;
         
         this.timeLastFlip = 0;
     }
     flipNext() {
         let totalLength = this.question.title.length + this.question.keyword.length;
         let availableLength = totalLength - this.showedAnswers.length;
-        if(this.availableLength === 0){
+        if(availableLength === 0){
             this.showAnswer = true;
             return;
         }
@@ -64,13 +71,11 @@ class FlipBoardTrivia extends TriviaQuestion{
     }
 
     tick(millis){
-        if(this.timeLastFlip === 0 || (millis-this.timeLastFlip) >= this.question.timePerWordDisplay){
+        if(this.timeLastFlip !== 0 && (millis-this.timeLastFlip) >= this.question.timePerWordDisplay){
             this.flipNext();
-            if(this.timeLastFlip !== 0){
-                this.timeLastFlip += this.question.timePerWordDisplay;
-            }else{
-                this.timeLastFlip = millis;
-            }
+            this.timeLastFlip += this.question.timePerWordDisplay;
+        }else if(this.timeLastFlip === 0){
+            this.timeLastFlip = millis;
         }
     }
 

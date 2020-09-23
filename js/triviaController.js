@@ -8,7 +8,6 @@ class TriviaController extends React.Component {
         this.handleYesClick = this.handleYesClick.bind(this);
         this.handleNoClick = this.handleNoClick.bind(this);
         this.handleStartGame = this.handleStartGame.bind(this);
-        //console.clear();
     }
 
     handleShowAnsClick(){
