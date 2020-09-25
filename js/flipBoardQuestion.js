@@ -67,7 +67,7 @@ class FlipBoardTrivia extends TriviaQuestion{
                 keywordDisplay += "✖";
             }
         }
-        return <div key="question"><h2 key="questionTitle">{titleDisplay}</h2><h3 key="questionKeyword">{keywordDisplay}</h3></div>;
+        return <div key="question"><h1 key="questionTitle">{titleDisplay}</h1><h2 key="questionKeyword">{keywordDisplay}</h2></div>;
     }
 
     tick(millis){
@@ -84,7 +84,7 @@ class FlipBoardTrivia extends TriviaQuestion{
     }
 
     getAnswer() {
-        return <div key="answer"><h2 key="answerTitle">{this.question.title}</h2><h3 key="answerKeyword">{this.question.keyword}</h3></div>;
+        return <div key="answer"><h1 key="answerTitle">{this.question.title}</h1><h2 key="answerKeyword">{this.question.keyword}</h2></div>;
     }
 
     getAnswerStr() {

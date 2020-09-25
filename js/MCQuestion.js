@@ -16,10 +16,10 @@ class MCQuestion extends TriviaQuestion{
         for(let i=0;i<this.question.options.length;i++){
             let currentOption = optionOrders[i];
             allOptionDisplay.push(
-                <p key={currentOption}>{currentOption}: {this.question.options[i]}</p>
+                <p className="lead" key={currentOption}>{currentOption}: {this.question.options[i]}</p>
             );
         }
-        return <div key="question"><p className="lead" key="questionText">问: {this.question.question}</p>{allOptionDisplay}</div>;
+        return <div key="question"><h2 key="questionText">问: {this.question.question}</h2>{allOptionDisplay}</div>;
     }
 
     tick(millis){
@@ -31,7 +31,7 @@ class MCQuestion extends TriviaQuestion{
     }
 
     getAnswer() {
-        return <div key="answer"><p className="lead" key="answerText">答案: {this.question.answer}</p></div>;
+        return <div key="answer"><h2 className="lead" key="answerText">答案: {this.question.answer}</h2></div>;
     }
 
     getAnswerStr() {

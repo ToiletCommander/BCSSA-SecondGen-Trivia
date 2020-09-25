@@ -9,7 +9,7 @@ class QuestionAns extends TriviaQuestion{
     }
 
     getQuestion() {
-        return <div key="question"><p className="lead" key="questionText">问: {this.question.question}</p></div>;
+        return <div key="question"><h2 key="questionText">问: {this.question.question}</h2></div>;
     }
 
     tick(millis){
@@ -21,7 +21,7 @@ class QuestionAns extends TriviaQuestion{
     }
 
     getAnswer() {
-        return <div key="answer"><p className="lead" key="answerText">答案: {this.question.answer}</p></div>;
+        return <div key="answer"><h2 className="lead" key="answerText">答案: {this.question.answer}</h2></div>;
     }
 
     getAnswerStr() {
