@@ -53,9 +53,9 @@ class TriviaController extends React.Component {
         let questionRemaining = this.state.question.getTimeLimit() == 0 ? null : this.state.question.getTimeLimit() - questionCurrentDuration;
         
         let renderedPage = [];
-        renderedPage.push(<p key="totalTimeRemaining">总时间剩余: {Math.round(remainingTime)}秒, 已答对{this.successNum}/{this.props.numToWin}题, 当前第{(this.state.currentNum + 1)}/{this.props.questions.length}题</p>);
+        renderedPage.push(<p key="totalTimeRemaining">⌛总时间剩余: {Math.round(remainingTime)}秒, 已答对{this.successNum}/{this.props.numToWin}题, 当前第{(this.state.currentNum + 1)}/{this.props.questions.length}题</p>);
         if(questionRemaining !== null){
-            renderedPage.push(<p key="currentQuestionRemaining">当前题目剩余时间: {Math.round(questionRemaining)}秒</p>);
+            renderedPage.push(<p key="currentQuestionRemaining">⌚当前题目剩余时间: {Math.round(questionRemaining)}秒</p>);
         }
         renderedPage.push(this.state.question.render());
         if(!this.state.question.showAnswer){
