@@ -1,6 +1,10 @@
 # BCSSA-SecondGen-Trivia
  Berkeley BCSSA SecondGen Trivia React Application
 
+## Play this game
+[play](https://toiletcommander.github.io/BCSSA-SecondGen-Trivia/)
+You can open developer's console by pressing F12 to view the answers when hosting games
+
 ## Deploy
 Either use a HTTP server to deploy and open up http://localhost/, or use the following steps and open link in file:/// schema
 
